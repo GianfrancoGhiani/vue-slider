@@ -37,7 +37,6 @@ const app = Vue.createApp({
        },
        goToPrev(){
         this.activeArg--
-        
         if (this.activeArg < 0){
             this.activeArg = this.slides.length - 1;
 

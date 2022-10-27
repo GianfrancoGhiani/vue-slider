@@ -14,7 +14,7 @@
 
         <div class="container" >
             <div class="slider-wrapper" tabindex="0">
-
+                <!-- on mouse over stops autoslider, on mouse leave starts a new autoslider -->
                 <div class="item" @mouseover="stopSlider" @mouseleave="autoSlider">
                     <img :src="slides[activeArg].image" :alt="slides[activeArg].title" />
                     <div class="text">
@@ -28,6 +28,7 @@
                 <div class="thumbs">
                     <div @click="goToPrev" class="prev"></div>
                     <div @click="goToNext" class="next"></div>
+                    <!-- if n-1 is equal to activeArg (film index), insert the class active in the thumb -->
                     <div v-for="n in 5" class="thumb" :class="(n - 1) == activeArg ? 'active' : ''">
                         <img :src="slides[n -1].image" :alt="slides[activeArg].title"/>
                     </div>
