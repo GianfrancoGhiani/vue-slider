@@ -29,7 +29,7 @@
                     <div @click="goToPrev" class="prev"></div>
                     <div @click="goToNext" class="next"></div>
                     <!-- if n-1 is equal to activeArg (film index), insert the class active in the thumb -->
-                    <div v-for="n in 5" class="thumb" :class="(n - 1) == activeArg ? 'active' : ''">
+                    <div v-for="n in 5" class="thumb" :class="(n - 1) == activeArg ? 'active' : ''" @click="activeArg = (n-1)">
                         <img :src="slides[n -1].image" :alt="slides[activeArg].title"/>
                     </div>
                     

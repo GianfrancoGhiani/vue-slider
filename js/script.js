@@ -45,7 +45,7 @@ const app = Vue.createApp({
        autoSlider(){
         this.timer = setInterval((value)=>{
             this.goToNext();
-        }, 3000);
+        }, 2000);
        },
        stopSlider(){
         clearInterval(this.timer);
